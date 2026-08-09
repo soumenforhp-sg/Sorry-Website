@@ -1,0 +1,1330 @@
+/* ==========================
+   TOP NAVIGATION
+========================== */
+
+.top-nav{
+    width:92%;
+    max-width:1200px;
+    margin:30px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+.nav-btn{
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.18);
+
+    transition:.35s ease;
+
+}
+
+.nav-btn:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    background:linear-gradient(
+        135deg,
+        #ff5ea8,
+        #ff9bcf);
+
+}
+
+
+/* ==========================
+   TIMELINE HERO
+========================== */
+
+.nav-btn:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    background:linear-gradient(
+        135deg,
+        #ff5ea8,
+        #ff9bcf);
+
+}
+
+.timeline-hero{
+
+    width:90%;
+    max-width:1000px;
+
+    margin:50px auto;
+
+    text-align:center;
+
+    animation:heroReveal 1s ease;
+
+}
+
+
+.hero-text{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:20px;
+
+    line-height:2;
+
+    opacity:.95;
+
+}
+
+
+@keyframes heroReveal{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+/* ==========================
+   TIMELINE CONTAINER
+========================== */
+
+
+.timeline{
+
+    position:relative;
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+}
+
+
+/* Central Line */
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:5px;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+        to bottom,
+
+        #ff4b91,
+
+        #ff9bcf,
+
+        #ffffff
+
+    );
+
+    box-shadow:
+
+    0 0 20px rgba(255,105,180,.7);
+
+}
+
+
+/* ==========================
+   TIMELINE ITEM
+========================== */
+
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    padding:35px;
+
+}
+
+
+.timeline-item.left{
+
+    left:0;
+
+    text-align:right;
+
+}
+
+
+.timeline-item.right{
+
+    left:50%;
+
+    text-align:left;
+
+}
+
+
+/* ==========================
+   TIMELINE DOTS
+========================== */
+
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:55px;
+
+    width:25px;
+
+    height:25px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #ff4b91,
+
+        #ffb6d9
+
+    );
+
+
+    border:5px solid rgba(255,255,255,.8);
+
+
+    box-shadow:
+
+    0 0 20px rgba(255,105,180,.8);
+
+    z-index:2;
+
+}
+
+
+.timeline-item.left::before{
+
+    right:-13px;
+
+}
+
+
+.timeline-item.right::before{
+
+    left:-13px;
+
+}
+
+
+/* ==========================
+   TIMELINE CONTENT CARD
+========================== */
+
+
+.timeline-content{
+
+    position:relative;
+
+    padding:35px;
+
+    border-radius:30px;
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.25);
+
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.25);
+
+
+    color:white;
+
+
+    transition:.45s ease;
+
+}
+
+
+
+.timeline-content:hover{
+
+    transform:
+
+    translateY(-10px);
+
+
+    box-shadow:
+
+    0 30px 60px rgba(0,0,0,.35);
+
+}
+
+
+/* ==========================
+   CARD HEADING
+========================== */
+
+
+.timeline-content h2{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #ffffff,
+
+        #ffd1e6
+
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+/* ==========================
+   CARD TEXT
+========================== */
+
+
+.timeline-content p{
+
+    font-size:17px;
+
+    line-height:2;
+
+    opacity:.95;
+
+}
+
+
+
+/* ==========================
+   CARD GLOW EFFECT
+========================== */
+
+
+.timeline-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:32px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(255,255,255,.3),
+
+        rgba(255,105,180,.25)
+
+    );
+
+
+    filter:blur(15px);
+
+    opacity:.5;
+
+
+    z-index:-1;
+
+}
+
+
+
+/* ==========================
+   TIMELINE REVEAL
+========================== */
+
+
+.timeline-item{
+
+    opacity:0;
+
+    animation:
+
+    timelineReveal .8s ease forwards;
+
+}
+
+
+.timeline-item:nth-child(1){
+
+    animation-delay:.2s;
+
+}
+
+
+.timeline-item:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+
+.timeline-item:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+
+.timeline-item:nth-child(4){
+
+    animation-delay:.8s;
+
+}
+
+
+.timeline-item:nth-child(5){
+
+    animation-delay:1s;
+
+}
+
+
+
+@keyframes timelineReveal{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+/* ==========================
+   TIMELINE CARD HOVER EFFECT
+========================== */
+
+
+.timeline-content:hover h2{
+
+    transform:
+    translateX(5px);
+
+}
+
+
+.timeline-content h2{
+
+    transition:.35s ease;
+
+}
+
+
+
+.timeline-content:hover::before{
+
+    opacity:.9;
+
+}
+
+
+
+/* ==========================
+   TIMELINE ICON EFFECT
+========================== */
+
+
+.timeline-item:hover::before{
+
+    transform:
+
+    scale(1.35);
+
+
+    box-shadow:
+
+    0 0 35px rgba(255,105,180,.9);
+
+}
+
+
+.timeline-item::before{
+
+    transition:.35s ease;
+
+}
+
+
+
+/* ==========================
+   ENDING MESSAGE SECTION
+========================== */
+
+
+.timeline-ending{
+
+    width:90%;
+
+    max-width:950px;
+
+    margin:90px auto;
+
+
+    padding:50px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    border-radius:35px;
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.25);
+
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.30);
+
+
+    animation:
+
+    endingReveal 1s ease;
+
+}
+
+
+
+@keyframes endingReveal{
+
+
+from{
+
+    opacity:0;
+
+    transform:
+
+    scale(.9);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:
+
+    scale(1);
+
+}
+
+
+}
+
+
+
+.timeline-ending h2{
+
+    font-size:38px;
+
+
+    margin-bottom:25px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #ffffff,
+
+        #ffb6d9
+
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    color:transparent;
+
+}
+
+
+
+.timeline-ending p{
+
+    font-size:19px;
+
+
+    line-height:2;
+
+
+    opacity:.95;
+
+}
+
+
+
+/* ==========================
+   ENDING BUTTONS
+========================== */
+
+
+.ending-buttons{
+
+    margin-top:35px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.ending-buttons .nav-btn{
+
+    min-width:220px;
+
+}
+
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+
+footer{
+
+    width:100%;
+
+
+    padding:30px;
+
+
+    margin-top:50px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    font-size:17px;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+    border-top:
+
+    1px solid rgba(255,255,255,.15);
+
+}
+
+
+
+/* ==========================
+   TABLET OPTIMIZATION
+========================== */
+
+
+@media(max-width:1100px){
+
+
+.timeline-content{
+
+    padding:28px;
+
+}
+
+
+
+.timeline-content h2{
+
+    font-size:26px;
+
+}
+
+
+
+.timeline-content p{
+
+    font-size:16px;
+
+}
+
+
+
+.timeline-ending{
+
+    padding:40px;
+
+}
+
+
+}
+
+
+
+/* ==========================
+   TIMELINE GLOW ANIMATION
+========================== */
+
+
+@keyframes lineGlow{
+
+
+0%{
+
+    filter:
+
+    brightness(1);
+
+}
+
+
+50%{
+
+    filter:
+
+    brightness(1.6);
+
+}
+
+
+100%{
+
+    filter:
+
+    brightness(1);
+
+}
+
+
+}
+
+
+
+.timeline::before{
+
+    animation:
+
+    lineGlow 4s infinite;
+
+}
+
+
+
+/* ==========================
+   MEMORY HEART DECORATION
+========================== */
+
+
+.timeline-content::after{
+
+
+    content:"❤️";
+
+
+    position:absolute;
+
+
+    right:25px;
+
+
+    top:20px;
+
+
+    font-size:25px;
+
+
+    opacity:.4;
+
+
+    animation:
+
+    heartFloat 3s ease-in-out infinite;
+
+
+}
+
+
+
+@keyframes heartFloat{
+
+
+0%,100%{
+
+    transform:
+
+    translateY(0);
+
+}
+
+
+50%{
+
+    transform:
+
+    translateY(-8px);
+
+}
+
+
+}
+
+/* ==========================
+   MOBILE TIMELINE
+========================== */
+
+
+@media(max-width:768px){
+
+
+.timeline{
+
+    width:92%;
+
+}
+
+
+/* Move center line */
+
+.timeline::before{
+
+    left:20px;
+
+    transform:none;
+
+    width:4px;
+
+}
+
+
+/* All items left aligned */
+
+.timeline-item,
+.timeline-item.left,
+.timeline-item.right{
+
+    width:100%;
+
+    left:0;
+
+    padding-left:55px;
+
+    padding-right:0;
+
+    text-align:left;
+
+}
+
+
+
+/* Move dots */
+
+.timeline-item.left::before,
+.timeline-item.right::before{
+
+    left:8px;
+
+    right:auto;
+
+}
+
+
+
+/* Cards */
+
+.timeline-content{
+
+    padding:25px;
+
+    border-radius:25px;
+
+}
+
+
+
+.timeline-content h2{
+
+    font-size:24px;
+
+}
+
+
+
+.timeline-content p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* Remove excessive movement */
+
+.timeline-item:hover::before{
+
+    transform:scale(1.15);
+
+}
+
+
+
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+
+@media(max-width:480px){
+
+
+.timeline{
+
+    margin-top:50px;
+
+}
+
+
+.timeline::before{
+
+    left:15px;
+
+}
+
+
+
+.timeline-item{
+
+    padding-left:45px;
+
+}
+
+
+
+.timeline-item.left::before,
+.timeline-item.right::before{
+
+    left:3px;
+
+    width:22px;
+
+    height:22px;
+
+}
+
+
+
+.timeline-content{
+
+    padding:22px;
+
+}
+
+
+
+.timeline-content h2{
+
+    font-size:21px;
+
+}
+
+
+
+.timeline-content p{
+
+    font-size:14px;
+
+}
+
+
+
+.timeline-content::after{
+
+    font-size:20px;
+
+    right:15px;
+
+    top:15px;
+
+}
+
+
+
+.timeline-ending{
+
+    width:92%;
+
+    padding:28px 20px;
+
+    border-radius:25px;
+
+}
+
+
+
+.timeline-ending h2{
+
+    font-size:28px;
+
+}
+
+
+
+.timeline-ending p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+.ending-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+.ending-buttons .nav-btn{
+
+    width:100%;
+
+    min-width:auto;
+
+}
+
+
+}
+
+
+/* ==========================
+   EXTRA SMALL DEVICES
+========================== */
+
+
+@media(max-width:350px){
+
+
+.timeline-item{
+
+    padding-left:38px;
+
+}
+
+
+
+.timeline::before{
+
+    left:12px;
+
+}
+
+
+
+.timeline-item::before{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+
+
+.timeline-content{
+
+    padding:18px;
+
+}
+
+
+
+.timeline-content h2{
+
+    font-size:19px;
+
+}
+
+
+
+.timeline-content p{
+
+    font-size:13px;
+
+}
+
+
+}
+
+
+/* ==========================
+   REDUCED MOTION SUPPORT
+========================== */
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+
+}
+
+
+
+/* ==========================
+   SMOOTH SCROLL
+========================== */
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/* ==========================
+   SELECTION STYLE
+========================== */
+
+
+::selection{
+
+    background:#ff6fa5;
+
+    color:white;
+
+}
+
+
+
+/* ==========================
+   PREMIUM SCROLLBAR
+========================== */
+
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:
+
+    linear-gradient(
+
+        #ff4b91,
+
+        #ffb6d9
+
+    );
+
+
+    border-radius:20px;
+
+}
+
+
+/* ==========================
+   FINAL TIMELINE POLISH
+========================== */
+
+
+.timeline-content{
+
+    overflow:hidden;
+
+}
+
+
+
+.timeline-content:hover{
+
+    border-color:
+
+    rgba(255,255,255,.5);
+
+}
+
+
+
+.timeline-ending:hover{
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.35);
+
+}
+
+
+
+.timeline-ending{
+
+    transition:.45s ease;
+
+}

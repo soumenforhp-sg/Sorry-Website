@@ -1,0 +1,1990 @@
+/* ===========================
+   RESET
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    width:100%;
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:#ffffff;
+
+    background:#111;
+
+    position:relative;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffe7ef;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+    180deg,
+    #ff4b91,
+    #ff8ec8);
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff3f7c;
+}
+
+/* ===========================
+   ANIMATED BACKGROUND
+=========================== */
+
+.background{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:-3;
+
+    background:linear-gradient(
+    -45deg,
+    #ff9aa2,
+    #fad0c4,
+    #fbc2eb,
+    #a18cd1,
+    #84fab0,
+    #8fd3f4);
+
+    background-size:600% 600%;
+
+    animation:gradientMove 18s ease infinite;
+
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+25%{
+background-position:50% 100%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+75%{
+background-position:50% 0%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* ===========================
+   SOFT GLOW
+=========================== */
+
+.background::before{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+left:-250px;
+top:-250px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.18);
+
+filter:blur(120px);
+
+animation:moveGlow1 10s infinite alternate;
+
+}
+
+.background::after{
+
+content:"";
+
+position:absolute;
+
+width:600px;
+height:600px;
+
+right:-200px;
+bottom:-200px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.12);
+
+filter:blur(120px);
+
+animation:moveGlow2 12s infinite alternate;
+
+}
+
+@keyframes moveGlow1{
+
+0%{
+transform:translate(0,0);
+}
+
+100%{
+transform:translate(150px,120px);
+}
+
+}
+
+@keyframes moveGlow2{
+
+0%{
+transform:translate(0,0);
+}
+
+100%{
+transform:translate(-120px,-100px);
+}
+
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+#loader{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+135deg,
+#ff7eb3,
+#ff758c,
+#a18cd1);
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+flex-direction:column;
+
+z-index:9999;
+
+transition:1s;
+
+}
+
+.loader-heart{
+
+font-size:90px;
+
+animation:pulse 1s infinite;
+
+}
+
+#loader h2{
+
+margin-top:20px;
+
+font-size:28px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.3);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.glass-card{
+
+position:relative;
+
+max-width:850px;
+
+width:90%;
+
+margin:70px auto;
+
+padding:50px;
+
+text-align:center;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.30);
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.30),
+
+0 0 40px rgba(255,255,255,.10);
+
+overflow:hidden;
+
+transition:.5s;
+
+}
+
+.glass-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.35),
+
+0 0 70px rgba(255,255,255,.18);
+
+}
+
+/* ===========================
+   GLASS SHINE
+=========================== */
+
+.glass-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+
+left:-60%;
+
+width:70%;
+
+height:250%;
+
+background:rgba(255,255,255,.25);
+
+transform:rotate(25deg);
+
+transition:1.2s;
+
+}
+
+.glass-card:hover::before{
+
+left:160%;
+
+}
+
+/* ===========================
+   TITLES
+=========================== */
+
+.title{
+
+font-size:55px;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+text-shadow:
+
+0 0 10px rgba(255,255,255,.5),
+
+0 0 25px rgba(255,105,180,.5);
+
+}
+
+.subtitle{
+
+font-size:26px;
+
+font-weight:300;
+
+margin-bottom:35px;
+
+letter-spacing:1px;
+
+opacity:.95;
+
+}
+
+/* ===========================
+   PROFILE IMAGE
+=========================== */
+
+.profile{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:8px solid rgba(255,255,255,.40);
+
+box-shadow:
+
+0 0 25px rgba(255,255,255,.4),
+
+0 0 50px rgba(255,105,180,.35);
+
+transition:.5s;
+
+animation:profileFloat 4s ease-in-out infinite;
+
+}
+
+.profile:hover{
+
+transform:scale(1.08) rotate(3deg);
+
+}
+
+@keyframes profileFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* ===========================
+   TYPEWRITER AREA
+=========================== */
+
+#typewriter{
+
+margin-top:35px;
+
+font-size:20px;
+
+line-height:1.9;
+
+min-height:180px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   BUTTON CONTAINER
+=========================== */
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+}
+
+/* ===========================
+   PREMIUM BUTTON
+=========================== */
+
+.buttons button{
+
+    position:relative;
+
+    padding:16px 34px;
+
+    border:none;
+    outline:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    font-size:17px;
+    font-weight:600;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+    135deg,
+    #ff4b91,
+    #ff8ec8);
+
+    box-shadow:
+    0 10px 30px rgba(255,75,145,.35);
+
+    transition:.35s ease;
+
+}
+
+.buttons button:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    box-shadow:
+    0 20px 45px rgba(255,75,145,.45);
+
+}
+
+.buttons button:active{
+
+    transform:scale(.95);
+
+}
+
+/* Shine */
+
+.buttons button::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-120%;
+
+width:50%;
+height:100%;
+
+background:rgba(255,255,255,.45);
+
+transform:skewX(-25deg);
+
+transition:1s;
+
+}
+
+.buttons button:hover::before{
+
+left:170%;
+
+}
+
+/* Glow Ring */
+
+.buttons button::after{
+
+content:"";
+
+position:absolute;
+
+inset:-3px;
+
+border-radius:50px;
+
+border:2px solid rgba(255,255,255,.25);
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+.buttons button:hover::after{
+
+opacity:1;
+
+}
+
+/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+#hearts-container{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-50px;
+
+color:#ffffff;
+
+opacity:.75;
+
+animation:heartFloat linear forwards;
+
+filter:drop-shadow(
+0 0 10px
+rgba(255,255,255,.45));
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+translateY(0)
+scale(.4)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+50%{
+
+opacity:.9;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+scale(1.4)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   FLOWER DECORATION
+=========================== */
+
+.flowers{
+
+position:fixed;
+
+left:0;
+
+bottom:15px;
+
+width:100%;
+
+text-align:center;
+
+font-size:28px;
+
+letter-spacing:15px;
+
+pointer-events:none;
+
+animation:flowerWave 4s ease-in-out infinite;
+
+opacity:.85;
+
+}
+
+@keyframes flowerWave{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-10px);
+
+}
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* ===========================
+   FALLING PETALS
+=========================== */
+
+.petal{
+
+position:fixed;
+
+top:-50px;
+
+font-size:24px;
+
+pointer-events:none;
+
+opacity:.85;
+
+animation:petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+rotate(720deg)
+translateX(100px);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   HEARTBEAT EFFECT
+=========================== */
+
+.heartbeat{
+
+animation:heartbeat 1.4s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+14%{
+
+transform:scale(1.15);
+
+}
+
+28%{
+
+transform:scale(1);
+
+}
+
+42%{
+
+transform:scale(1.18);
+
+}
+
+70%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================
+   GLOWING TEXT
+=========================== */
+
+.glow{
+
+text-shadow:
+
+0 0 8px rgba(255,255,255,.8),
+
+0 0 20px rgba(255,105,180,.8),
+
+0 0 40px rgba(255,105,180,.6);
+
+}
+
+/* ===========================
+   FADE ANIMATION
+=========================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(40px);
+
+animation:fadeUp 1s forwards;
+
+}
+
+@keyframes fadeUp{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   FLOAT EFFECT
+=========================== */
+
+.float{
+
+animation:floatAnimation 5s ease-in-out infinite;
+
+}
+
+@keyframes floatAnimation{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   CARD HOVER
+=========================== */
+
+.hover-card{
+
+transition:.35s;
+
+}
+
+.hover-card:hover{
+
+transform:
+
+translateY(-10px)
+scale(1.02);
+
+}
+
+/* ===========================
+   IMAGE EFFECT
+=========================== */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+.soft-shadow{
+
+box-shadow:
+
+0 12px 35px
+rgba(0,0,0,.25);
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+text-decoration:none;
+
+color:#ffffff;
+
+transition:.3s;
+
+}
+
+a:hover{
+
+color:#ffe6ef;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+margin-top:70px;
+
+padding:25px;
+
+text-align:center;
+
+font-size:16px;
+
+font-weight:500;
+
+letter-spacing:1px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-top:1px solid rgba(255,255,255,.18);
+
+}
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection{
+
+background:#ff4b91;
+
+color:#ffffff;
+
+}
+
+/* ===========================
+   UTILITY CLASSES
+=========================== */
+
+.text-center{
+
+text-align:center;
+
+}
+
+.mt-20{
+
+margin-top:20px;
+
+}
+
+.mt-40{
+
+margin-top:40px;
+
+}
+
+.mb-20{
+
+margin-bottom:20px;
+
+}
+
+.mb-40{
+
+margin-bottom:40px;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.show{
+
+display:block;
+
+}
+
+.round{
+
+border-radius:50%;
+
+}
+
+.blur{
+
+backdrop-filter:blur(20px);
+
+}
+
+.shadow{
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.25);
+
+}
+
+/* ==========================================
+   LARGE DESKTOP (1400px+)
+========================================== */
+
+@media screen and (min-width:1400px){
+
+.glass-card{
+
+max-width:950px;
+
+padding:70px;
+
+}
+
+.title{
+
+font-size:65px;
+
+}
+
+.subtitle{
+
+font-size:30px;
+
+}
+
+.profile{
+
+width:260px;
+height:260px;
+
+}
+
+#typewriter{
+
+font-size:22px;
+
+line-height:2;
+
+}
+
+.buttons button{
+
+font-size:18px;
+
+padding:18px 42px;
+
+}
+
+footer{
+
+font-size:18px;
+
+}
+
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media screen and (max-width:1200px){
+
+.glass-card{
+
+width:92%;
+
+padding:45px;
+
+}
+
+.title{
+
+font-size:52px;
+
+}
+
+.profile{
+
+width:210px;
+height:210px;
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media screen and (max-width:992px){
+
+.glass-card{
+
+padding:40px;
+
+border-radius:28px;
+
+}
+
+.title{
+
+font-size:44px;
+
+}
+
+.subtitle{
+
+font-size:23px;
+
+}
+
+.profile{
+
+width:190px;
+height:190px;
+
+}
+
+#typewriter{
+
+font-size:18px;
+
+min-height:150px;
+
+}
+
+.buttons{
+
+gap:16px;
+
+}
+
+.buttons button{
+
+padding:15px 28px;
+
+font-size:16px;
+
+}
+
+.flowers{
+
+font-size:22px;
+
+letter-spacing:8px;
+
+}
+
+}
+
+/* ==========================================
+   LARGE MOBILE
+========================================== */
+
+@media screen and (max-width:768px){
+
+.glass-card{
+
+width:94%;
+
+padding:30px 22px;
+
+margin:35px auto;
+
+}
+
+.title{
+
+font-size:34px;
+
+line-height:1.3;
+
+}
+
+.subtitle{
+
+font-size:20px;
+
+margin-bottom:25px;
+
+}
+
+.profile{
+
+width:160px;
+height:160px;
+
+border-width:6px;
+
+}
+
+#typewriter{
+
+font-size:17px;
+
+line-height:1.8;
+
+padding:18px;
+
+min-height:120px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.buttons button{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+.loader-heart{
+
+font-size:70px;
+
+}
+
+#loader h2{
+
+font-size:22px;
+
+}
+
+footer{
+
+font-size:15px;
+
+padding:20px;
+
+}
+
+.flowers{
+
+font-size:20px;
+
+letter-spacing:4px;
+
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media screen and (max-width:576px){
+
+body{
+
+padding:12px;
+
+}
+
+.glass-card{
+
+padding:24px 18px;
+
+border-radius:24px;
+
+}
+
+.title{
+
+font-size:30px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+.profile{
+
+width:140px;
+height:140px;
+
+}
+
+#typewriter{
+
+font-size:16px;
+
+padding:15px;
+
+line-height:1.7;
+
+}
+
+.buttons button{
+
+font-size:15px;
+
+padding:14px 20px;
+
+}
+
+.loader-heart{
+
+font-size:58px;
+
+}
+
+#loader h2{
+
+font-size:20px;
+
+}
+
+footer{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES
+========================================== */
+
+@media screen and (max-width:400px){
+
+.title{
+
+font-size:26px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+}
+
+.profile{
+
+width:120px;
+height:120px;
+
+}
+
+#typewriter{
+
+font-size:15px;
+
+min-height:100px;
+
+}
+
+.buttons button{
+
+font-size:14px;
+
+padding:13px 16px;
+
+}
+
+.flowers{
+
+font-size:16px;
+
+letter-spacing:2px;
+
+}
+
+footer{
+
+font-size:13px;
+
+}
+
+}
+
+/* ==========================================
+   LANDSCAPE PHONES
+========================================== */
+
+@media screen and (max-height:500px) and (orientation:landscape){
+
+.glass-card{
+
+margin:20px auto;
+
+padding:20px;
+
+}
+
+.profile{
+
+width:110px;
+height:110px;
+
+}
+
+.title{
+
+font-size:28px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+margin-bottom:15px;
+
+}
+
+#typewriter{
+
+min-height:auto;
+
+font-size:15px;
+
+}
+
+.buttons{
+
+flex-direction:row;
+
+flex-wrap:wrap;
+
+}
+
+.buttons button{
+
+width:auto;
+
+}
+
+footer{
+
+margin-top:30px;
+
+}
+
+}
+
+/* ==========================================
+   IMAGE RESPONSIVE
+========================================== */
+
+img{
+
+max-width:100%;
+
+height:auto;
+
+}
+
+/* ==========================================
+   FLEX HELPERS
+========================================== */
+
+.flex{
+
+display:flex;
+
+}
+
+.flex-center{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.flex-column{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.space-between{
+
+justify-content:space-between;
+
+}
+
+.space-around{
+
+justify-content:space-around;
+
+}
+
+/* ==========================================
+   WIDTH HELPERS
+========================================== */
+
+.w-100{
+
+width:100%;
+
+}
+
+.h-100{
+
+height:100%;
+
+}
+
+.max-width{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+/* ==========================================
+   SPACING HELPERS
+========================================== */
+
+.p-10{
+
+padding:10px;
+
+}
+
+.p-20{
+
+padding:20px;
+
+}
+
+.p-30{
+
+padding:30px;
+
+}
+
+.m-10{
+
+margin:10px;
+
+}
+
+.m-20{
+
+margin:20px;
+
+}
+
+.m-auto{
+
+margin:auto;
+
+}
+
+/* ==========================================
+   TEXT HELPERS
+========================================== */
+
+.text-left{
+
+text-align:left;
+
+}
+
+.text-right{
+
+text-align:right;
+
+}
+
+.bold{
+
+font-weight:700;
+
+}
+
+.light{
+
+font-weight:300;
+
+}
+
+.uppercase{
+
+text-transform:uppercase;
+
+}
+
+.capitalize{
+
+text-transform:capitalize;
+
+}
+
+
+/* Smooth transitions */
+
+*,
+*::before,
+*::after{
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+/* Card glow */
+
+.glass-card{
+    position:relative;
+}
+
+.glass-card::after{
+
+    content:"";
+
+    position:absolute;
+    inset:-2px;
+
+    border-radius:35px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.25),
+        rgba(255,105,180,.15),
+        rgba(255,255,255,.25)
+    );
+
+    z-index:-1;
+
+    filter:blur(15px);
+
+    opacity:.7;
+
+}
+
+/* Decorative stars */
+
+.star{
+
+    position:fixed;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 0 8px #ffffff,
+        0 0 20px #ffffff;
+
+    animation:twinkle 3s infinite;
+
+    pointer-events:none;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+transform:scale(.7);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(1.4);
+
+}
+
+}
+
+/* Floating animation */
+
+.float-slow{
+
+animation:floatSlow 8s ease-in-out infinite;
+
+}
+
+@keyframes floatSlow{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* Pulse glow */
+
+.glow-pulse{
+
+animation:glowPulse 2s infinite;
+
+}
+
+@keyframes glowPulse{
+
+0%{
+
+box-shadow:
+0 0 10px rgba(255,255,255,.2);
+
+}
+
+50%{
+
+box-shadow:
+0 0 30px rgba(255,105,180,.45);
+
+}
+
+100%{
+
+box-shadow:
+0 0 10px rgba(255,255,255,.2);
+
+}
+
+}
+
+/* Fade In */
+
+.fade-in{
+
+animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Zoom In */
+
+.zoom-in{
+
+animation:zoomIn .6s ease;
+
+}
+
+@keyframes zoomIn{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* Glass hover */
+
+.glass-card:hover{
+
+backdrop-filter:blur(22px);
+
+}
+
+/* Profile image glow */
+
+.profile:hover{
+
+box-shadow:
+
+0 0 25px rgba(255,255,255,.6),
+
+0 0 60px rgba(255,105,180,.45),
+
+0 0 100px rgba(255,105,180,.25);
+
+}
+
+/* Button focus */
+
+.buttons button:focus{
+
+outline:none;
+
+box-shadow:
+
+0 0 0 4px rgba(255,255,255,.25),
+
+0 0 20px rgba(255,105,180,.4);
+
+}
+
+/* Footer */
+
+footer{
+
+backdrop-filter:blur(14px);
+
+}
+
+/* Reduce motion */
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}
+
+/* ==========================================
+   TYPEWRITER CURSOR
+========================================== */
+
+@keyframes blinkCursor{
+
+0%{
+opacity:1;
+}
+
+50%{
+opacity:0;
+}
+
+100%{
+opacity:1;
+}
+}
+
+/* Better heart rendering */
+
+.heart{
+
+    will-change: transform, opacity;
+
+    user-select: none;
+
+    pointer-events: none;
+
+}
+
+/* ===========================
+   MUSIC BUTTON
+=========================== */
+
+.music-playing{
+
+background:linear-gradient(
+135deg,
+#6a11cb,
+#2575fc
+) !important;
+
+box-shadow:
+0 0 20px rgba(37,117,252,.45);
+
+}
+
+/* ==========================================
+   RIPPLE EFFECT
+========================================== */
+
+.buttons button{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.ripple{
+
+position:absolute;
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.65);
+
+transform:translate(-50%,-50%) scale(0);
+
+animation:rippleAnimation .7s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes rippleAnimation{
+
+to{
+
+transform:translate(-50%,-50%) scale(18);
+
+opacity:0;
+
+}
+
+}

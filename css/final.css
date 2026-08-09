@@ -1,0 +1,645 @@
+/* ==========================
+   TOP NAVIGATION
+========================== */
+
+.top-nav{
+    width:92%;
+    max-width:1200px;
+    margin:30px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+.nav-btn{
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.18);
+
+    transition:.35s ease;
+
+}
+
+.nav-btn:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    background:linear-gradient(
+        135deg,
+        #ff5ea8,
+        #ff9bcf);
+
+}
+
+
+/* ==========================
+   FINAL HERO
+========================== */
+
+.final-hero{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:60px auto;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+.rose-decoration{
+
+    font-size:45px;
+
+    letter-spacing:15px;
+
+    animation:
+    roseFloat 3s ease-in-out infinite;
+
+}
+
+
+
+@keyframes roseFloat{
+
+0%,100%{
+
+    transform:
+    translateY(0);
+
+}
+
+50%{
+
+    transform:
+    translateY(-15px);
+
+}
+
+}
+
+
+
+.final-subtitle{
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    line-height:2;
+
+    opacity:.95;
+
+}
+
+
+
+/* ==========================
+   LETTER SECTION
+========================== */
+
+
+.letter-container{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:50px auto;
+
+}
+
+
+
+.apology-letter{
+
+    padding:45px;
+
+    border-radius:35px;
+
+    color:white;
+
+    background:
+
+    rgba(255,255,255,.13);
+
+
+    backdrop-filter:
+
+    blur(25px);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.25);
+
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.35);
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+.apology-letter::before{
+
+    content:"💖";
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    font-size:35px;
+
+    opacity:.5;
+
+}
+
+
+
+.apology-letter h2{
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:35px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #ffffff,
+
+        #ffc1dc
+
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+.apology-letter p{
+
+    font-size:18px;
+
+    line-height:2.1;
+
+}
+
+
+
+/* ==========================
+   FORGIVENESS SECTION
+========================== */
+
+
+.forgive-section{
+
+    width:90%;
+
+    max-width:800px;
+
+    margin:70px auto;
+
+
+    padding:45px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    border-radius:35px;
+
+
+}
+
+
+
+.forgive-section h2{
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.forgive-section p{
+
+    font-size:28px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+
+.forgive-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.forgive-buttons button{
+
+
+    padding:16px 35px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    cursor:pointer;
+
+
+    font-size:17px;
+
+
+    font-weight:600;
+
+
+    color:white;
+
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #ff4b91,
+
+        #ff9bcf
+
+    );
+
+
+
+    box-shadow:
+
+    0 15px 30px rgba(255,75,145,.35);
+
+
+
+    transition:.4s ease;
+
+
+}
+
+
+
+.forgive-buttons button:hover{
+
+
+    transform:
+
+    translateY(-6px)
+    scale(1.05);
+
+
+
+}
+
+
+
+/* ==========================
+   RESPONSE MESSAGE
+========================== */
+
+
+#forgiveMessage{
+
+
+    margin-top:35px;
+
+
+    font-size:22px;
+
+
+    min-height:40px;
+
+
+    color:#ffe1ef;
+
+
+}
+
+
+
+/* ==========================
+   PROMISE SECTION
+========================== */
+
+
+.promise-section{
+
+    width:90%;
+
+    max-width:850px;
+
+
+    margin:80px auto;
+
+
+}
+
+
+
+.promise-section .glass-card{
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+}
+
+
+
+.promise-section h2{
+
+
+    font-size:35px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.promise-section p{
+
+
+    font-size:19px;
+
+
+    line-height:2;
+
+
+}
+
+
+
+/* ==========================
+   HEART PARTICLES
+========================== */
+
+
+.final-heart{
+
+    position:fixed;
+
+
+    bottom:-50px;
+
+
+    pointer-events:none;
+
+
+    animation:
+
+    heartRise 8s linear forwards;
+
+
+}
+
+
+
+@keyframes heartRise{
+
+
+0%{
+
+    transform:
+
+    translateY(0)
+    scale(1);
+
+    opacity:1;
+
+}
+
+
+100%{
+
+
+    transform:
+
+    translateY(-120vh)
+    scale(1.8);
+
+
+    opacity:0;
+
+
+}
+
+
+}
+
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+
+@media(max-width:768px){
+
+
+.final-hero{
+
+    margin-top:35px;
+
+}
+
+
+
+.rose-decoration{
+
+    font-size:32px;
+
+}
+
+
+
+.final-subtitle{
+
+    font-size:16px;
+
+}
+
+
+
+.apology-letter{
+
+    padding:25px;
+
+}
+
+
+
+.apology-letter h2{
+
+    font-size:28px;
+
+}
+
+
+
+.apology-letter p{
+
+    font-size:15px;
+
+}
+
+
+
+.forgive-section{
+
+    padding:30px 20px;
+
+}
+
+
+
+.forgive-section h2{
+
+    font-size:30px;
+
+}
+
+
+
+.forgive-section p{
+
+    font-size:23px;
+
+}
+
+
+
+.forgive-buttons button{
+
+    width:100%;
+
+}
+
+
+
+.promise-section .glass-card{
+
+    padding:25px;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:450px){
+
+
+.rose-decoration{
+
+    letter-spacing:5px;
+
+}
+
+
+
+.final-subtitle{
+
+    line-height:1.7;
+
+}
+
+
+
+.apology-letter p{
+
+    line-height:1.8;
+
+}
+
+
+
+.forgive-section p{
+
+    font-size:20px;
+
+}
+
+
+}

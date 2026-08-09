@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>I'm Sorry ❤️</title>
+
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+
+    <div id="loader">
+      <div class="loader-heart">❤️</div>
+
+      <h2>Loading Love...</h2>
+    </div>
+
+    <!-- Background -->
+
+    <div class="background"></div>
+
+    <!-- Floating Hearts -->
+
+    <div id="hearts-container"></div>
+
+    <!-- Music -->
+
+    <audio id="bgMusic" loop>
+      <source src="music/music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio id="typingSound" 
+        src="music/typing.mp3"
+        preload="auto">
+    </audio>
+
+    <!-- Main Card -->
+
+    <div class="glass-card">
+      <h1 class="title">I'm Really Sorry...</h1>
+
+      <h2 class="subtitle">To My Best Friend ❤️</h2>
+
+      <img src="images/profile.png" class="profile" alt="Friend" />
+
+      <p id="typewriter"></p>
+
+      <div class="buttons">
+        <button onclick="location.href = 'gallery.html'">
+          📸 Our Memories
+        </button>
+
+        <button id="musicBtn">🎵 Play Music</button>
+
+        <button onclick="location.href = 'memories.html'">
+          💖 Friendship Story
+        </button>
+
+        <button onclick="location.href = 'final.html'">🌹 Final Message</button>
+
+        <button onclick="location.href = 'index.html'">😅 Start Again</button>
+      </div>
+    </div>
+
+    <!-- Floating Flowers -->
+
+    <div class="flowers">🌸 🌺 🌹 🌸 🌺 🌹 🌸</div>
+
+    <!-- Footer -->
+
+    <footer>Made with ❤️ Only For You</footer>
+
+    <script src="js/home.js"></script>
+    <!-- <script src="js/typewriter.js"></script> -->
+    <script src="js/typewriter2.js"></script>
+    <script src="js/hearts.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
